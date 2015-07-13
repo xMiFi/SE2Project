@@ -1,0 +1,27 @@
+.root{
+    -fx-base: #6633CC;
+    -fx-background: #6633CC;
+}
+
+#background{    
+	-fx-background-color: #6633CC;
+}
+
+#rightSide{    
+	-fx-background-color: #6633CC;
+}
+
+.text-field{
+	-fx-background-color: #6633CC;
+	-fx-text-fill: black;
+	-fx-prompt-text-fill: #6633CC;
+}
+
+.text-area{
+	-fx-background-color: #6633CC;
+	-fx-text-fill: black;
+	-fx-prompt-text-fill: #6633CC;
+}
+.text-area .content{
+	-fx-background-color: #6633CC;
+}
