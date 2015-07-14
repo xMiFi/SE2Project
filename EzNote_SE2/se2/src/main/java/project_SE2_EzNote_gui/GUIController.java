@@ -14,7 +14,7 @@ import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
-
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 
 import javafx.scene.control.Label;
@@ -40,6 +40,7 @@ public class GUIController {
 	
     private static Logger log = LogManager.getLogger(Driver.class);
     
+   
 
       
     
@@ -156,8 +157,8 @@ public class GUIController {
 		log.debug("List-View updated with filteredList!");
     }
     
-    @FXML protected void handleRemoveNoteBtn() {
-		log.info("'RemoveNoteBtn' pressed!");
+    @FXML protected void handleRemoveNoteButton() {
+		log.info("'RemoveNoteButton' pressed!");
     	if (noteListView.getSelectionModel().getSelectedItem() != null){
 			IntListObject tmpNote = noteListView.getSelectionModel().getSelectedItem();
 			if (tmpNote.getEditable()){
@@ -168,8 +169,8 @@ public class GUIController {
     	}
     }
     
-    @FXML protected void handleSearchBtn() {
-		log.info("'handleSearchBtn' pressed!");
+    @FXML protected void handleSearchButton() {
+		log.info("'handleSearchButton' pressed!");
     	NoteHandler.searchNote(searchField.getText());
     	noteListView.setItems(NoteHandler.getObservableFilteredList());
 		log.debug("List-View updated with filteredList!");
@@ -181,7 +182,7 @@ public class GUIController {
     
     @FXML protected void handleEnterOnSearch(KeyEvent key) {
     	if (key.getCode().equals(KeyCode.ENTER)){
-    		handleSearchBtn();
+    		handleSearchButton();
     	}
     }
 }

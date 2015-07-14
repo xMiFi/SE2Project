@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 public class Driver extends Application {
 
-private static Logger log = LogManager.getLogger(Driver.class);
+	private static Logger log = LogManager.getLogger(Driver.class);
 	
 	public static void main(String[] args) {
 		launch(args);
